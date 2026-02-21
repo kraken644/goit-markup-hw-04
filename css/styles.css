@@ -139,7 +139,6 @@ a:focus {
         /* #region main title cobtainer */
 
 .section-main-title {
-    padding: 188px 0;
 }
 
 .main-title-container {
@@ -148,6 +147,8 @@ a:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1440px;
+    max-height: 600px;
 }
 
 .main-title {
@@ -398,9 +399,26 @@ a:focus {
 
 /* #region Effective Solutions for Your Business */
 
-.section-main-title {
-    background-color: #2E2F42;
+.section-features-container {
 }
+
+.section-main-title {
+    background-image: url(../images/hero-image.jpg);
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image.jpg);
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+
+.icon-instagram {
+    fill: white;
+}
+
+
+
 
 .main-title {
     font-family: "Roboto", sans-serif;
@@ -570,6 +588,7 @@ a:focus {
     letter-spacing: 0.02em;
     color: #F4F4FD;
 }
+
 
 /* #endregion footer */
 
