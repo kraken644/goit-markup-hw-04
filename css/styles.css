@@ -410,6 +410,7 @@ a:focus {
 .section-main-title {
     background-image: url(../images/hero-image.jpg);
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image.jpg);
+    background-color: #2e2f42;
     margin: 0 auto;
     background-size: cover;
     background-position: center;
