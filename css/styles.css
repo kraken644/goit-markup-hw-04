@@ -357,11 +357,10 @@ a:focus {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    color: #404bbf 
 }
 
 .nav-active{
-    color: #2E2F42;
+    color: #404BBF;
 }
 
 .nav-active:hover,
