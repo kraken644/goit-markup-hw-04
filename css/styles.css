@@ -76,6 +76,7 @@ a {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: #434455;
+    transition: color 250ms ease-in-out;
 }
 
 a:hover,
@@ -111,7 +112,6 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
     flex-grow: 1;
 }
 
@@ -138,8 +138,7 @@ a:focus {
 
         /* #region main title cobtainer */
 
-.section-main-title {
-}
+
 
 .main-title-container {
     display: flex;
@@ -244,7 +243,7 @@ a:focus {
     flex-direction: column;
     align-items: center;
     width: 264px;
-    height: 380px;
+    height: 428px;
 }
 
 .team-text-container {
@@ -283,11 +282,7 @@ a:focus {
     row-gap: 48px;
 }
 
-.list-portfolio {
-    display: flex;
-    flex-direction: column;
-    width: 360px;
-}
+
 
 .portfolio-text-container {
     border-bottom: 1px solid #e7e9fc;
@@ -296,6 +291,7 @@ a:focus {
     padding: 32px 16px;
     width: 360px;
     height: 120px;
+    transition: box-shadow 250ms ease-in-out;
 }
 
 .list-title-portfolio {
@@ -306,21 +302,7 @@ a:focus {
 
         /* #region footer container */
 
-.footer {
-    padding: 100px 0;
-}
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-}
-
-.text-footer {
-    width: 264px;
-    margin-top: 16px;
-}
 
 /* #endregion footer container */
 
@@ -361,9 +343,26 @@ a:focus {
     display: block;
 }
 
+.nav-studio {
+    position: relative;
+}
+
+
+.nav-active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+}
+
 .navigation a {
     display: block;
-    padding: 24px 0
+    padding: 24px 0;
+    transition: color 250ms ease-in-out;
 }
 
 
@@ -388,6 +387,7 @@ a:focus {
     letter-spacing: 0.02em;
     color: #434455;
     font-style: normal;
+    transition: color 250ms ease-in-out;
 }
 
 .contact:hover,
@@ -399,8 +399,6 @@ a:focus {
 
 /* #region Effective Solutions for Your Business */
 
-.section-features-container {
-}
 
 .section-main-title {
     background-image: url(../images/hero-image.jpg);
@@ -409,16 +407,8 @@ a:focus {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
+    max-width: 1440px;
 }
-
-
-.icon-instagram {
-    fill: white;
-}
-
-
-
 
 .main-title {
     font-family: "Roboto", sans-serif;
@@ -440,6 +430,7 @@ a:focus {
     text-align: center;
     color: white;
     cursor: pointer;
+    transition: background-color 250ms ease-in-out;
 }
 
 .main-button:hover,
@@ -457,6 +448,18 @@ a:focus {
     font-weight: 700;
     font-size: 36px;
     letter-spacing: 0.02em;
+}
+
+.icons-features {
+    display: flex;
+    height: 112px;
+    width: 264px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .list-title {
@@ -479,6 +482,8 @@ a:focus {
     text-align: left;
 }
 
+
+
 /* #endregion Our Features */
 
 /* #region img our team */
@@ -499,7 +504,8 @@ a:focus {
 
 .section-team-list {
     background-color: white;
-    border-radius: 0 0 4px 4px
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .list-title-team {
@@ -522,6 +528,39 @@ a:focus {
     text-align: center;
 } 
 
+
+.icons-media-list {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+    fill: white;
+}
+
+.icons-media-item {
+    display: flex;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.section-team-list:hover .icons-media-item {
+    background-color: #404bbf;
+}
+
+.section-team-list .icons-media-item:hover {
+    background-color: #31d0aa;
+}
+
 /* #endregion img our team */
 
 
@@ -539,6 +578,11 @@ a:focus {
 
 .list-portfolio {
     background-color: white;
+}
+
+
+.list-portfolio:hover .portfolio-text-container {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .list-title-portfolio {
@@ -561,6 +605,32 @@ a:focus {
     text-align: left;
 }
 
+.img-portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-img-wrapper {
+    background-color: blue;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+
+.list-portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.list-portfolio:hover .portfolio-img-wrapper {
+    transform: translateY(0);
+}
 
 /* #endregion Our Portfolio */
 
@@ -568,6 +638,11 @@ a:focus {
 
 .footer {
     background-color: #2E2F42;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .name-studio-footer {
@@ -581,6 +656,7 @@ a:focus {
 }
 
 .text-footer {
+    display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -589,6 +665,57 @@ a:focus {
     color: #F4F4FD;
 }
 
+.text-social-footer {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    display: flex;
+}
 
+.footer-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-icons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.footer-logo-container {
+        width: 264px;
+}
+
+
+.main-name-footer {
+    display: block;
+    margin-bottom: 16px;
+}
+
+
+
+.footer {
+    padding: 100px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 120px;
+    flex-grow: 0;
+
+}
+
+.text-footer {
+    width: 264px;
+}
 /* #endregion footer */
+
+
 
