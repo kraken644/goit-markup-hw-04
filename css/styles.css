@@ -20,6 +20,7 @@
 
 header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 
@@ -76,7 +77,7 @@ a {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: #434455;
-    transition: color 250ms ease-in-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover,
@@ -142,12 +143,9 @@ a:focus {
 
 .main-title-container {
     display: flex;
-    height: 600px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1440px;
-    max-height: 600px;
 }
 
 .main-title {
@@ -210,10 +208,12 @@ a:focus {
     padding: 120px 0;
 }
 
+
 .team-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .team-text-container {
@@ -291,7 +291,7 @@ a:focus {
     padding: 32px 16px;
     width: 360px;
     height: 120px;
-    transition: box-shadow 250ms ease-in-out;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-title-portfolio {
@@ -348,7 +348,7 @@ a:focus {
 }
 
 
-.nav-active::after {
+.nav-active:active::after {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -357,12 +357,13 @@ a:focus {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
+    color: #404bbf 
 }
 
 .navigation a {
     display: block;
     padding: 24px 0;
-    transition: color 250ms ease-in-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -374,10 +375,6 @@ a:focus {
     text-decoration: none;
 }
 
-.nav-studio:active {
-    text-decoration: underline;
-}
-
 .contact {
     display: block;
     font-family: 'Roboto', sans-serif;
@@ -387,7 +384,7 @@ a:focus {
     letter-spacing: 0.02em;
     color: #434455;
     font-style: normal;
-    transition: color 250ms ease-in-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover,
@@ -408,6 +405,7 @@ a:focus {
     background-position: center;
     background-repeat: no-repeat;
     max-width: 1440px;
+    padding: 188px 0;
 }
 
 .main-title {
@@ -430,7 +428,7 @@ a:focus {
     text-align: center;
     color: white;
     cursor: pointer;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -531,7 +529,7 @@ a:focus {
 
 .icons-media-list {
     display: flex;
-    gap: 16px;
+    gap: 24px;
     margin-top: 8px;
 }
 
@@ -550,15 +548,12 @@ a:focus {
     justify-content: center;
     width: 40px;
     height: 40px;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-team-list:hover .icons-media-item {
-    background-color: #404bbf;
-}
 
 .section-team-list .icons-media-item:hover {
-    background-color: #31d0aa;
+    background-color: #404bbf;
 }
 
 /* #endregion img our team */
@@ -581,7 +576,7 @@ a:focus {
 }
 
 
-.list-portfolio:hover .portfolio-text-container {
+.list-portfolio:hover {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
@@ -611,14 +606,19 @@ a:focus {
 }
 
 .portfolio-img-wrapper {
-    background-color: blue;
+    background-color: #4d5ae5;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     position: absolute;
     transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
 }
 
 
@@ -706,7 +706,7 @@ a:focus {
 .footer-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: baseline;
     column-gap: 120px;
     flex-grow: 0;
 
@@ -715,6 +715,23 @@ a:focus {
 .text-footer {
     width: 264px;
 }
+
+.icons-media-footer {
+    display: flex;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-media-footer:hover,
+.icons-media-footer:focus {
+    background-color: #31d0aa;
+}
+
 /* #endregion footer */
 
 
